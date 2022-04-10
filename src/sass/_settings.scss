@@ -1,0 +1,30 @@
+$body-color: #222;
+
+// Grid gutter
+$grid-gutter-width: 20px;
+
+// RFS
+$rfs-base-value: 1rem;
+$rfs-factor: 50;
+
+// Colors
+$secondary: #777;
+$accent: #F5F3F5;
+$on-accent: #fff;
+
+$theme-colors: (
+    "accent": $accent,
+    "on-accent": $on-accent
+);
+
+// Enable shadows
+$enable-shadows: true;
+
+// Enable gradients
+$enable-gradients: true;
+
+// Links
+$link-color: currentcolor;
+$link-decoration: underline;
+$link-hover-color: currentcolor;
+$link-hover-decoration: none;

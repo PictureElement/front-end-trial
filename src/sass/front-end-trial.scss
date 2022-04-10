@@ -15,10 +15,20 @@
 @import "../vendor/bootstrap/scss/root";
 
 // 4. Include any optional Bootstrap CSS as needed
+@import "../vendor/bootstrap/scss/utilities";
+@import "../vendor/bootstrap/scss/reboot";
 @import "../vendor/bootstrap/scss/containers";
 @import "../vendor/bootstrap/scss/grid";
 
-// 5. Additional custom code
-.hello {
-  color: red;
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../vendor/bootstrap/scss/utilities/api";
+
+// 6. Additional custom code
+.border {
+  border: 1px solid gray;
+}
+
+h1 {
+  @include font-size(4rem);
+  @include rfs(4rem, margin-bottom);
 }
