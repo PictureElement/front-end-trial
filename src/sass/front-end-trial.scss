@@ -23,23 +23,34 @@
 @import "../vendor/bootstrap/scss/buttons";
 @import "../vendor/bootstrap/scss/transitions";
 @import "../vendor/bootstrap/scss/navbar";
+@import "../vendor/bootstrap/scss/carousel";
+@import "../vendor/bootstrap/scss/helpers";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../vendor/bootstrap/scss/utilities/api";
 
 // 6. Additional custom code
-.border {
-  border: 1px solid gray;
-}
+// .border {
+//   border: 1px solid gray;
+// }
 
-h1 {
-  @include font-size(4rem);
-  @include rfs(4rem, margin-bottom);
-}
+// h1 {
+//   @include font-size(4rem);
+//   @include rfs(4rem, margin-bottom);
+// }
 
 .btn {
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.animation-float {
+  transition-duration: .3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  &:hover, &:focus, &:active {
+    transform: translateY(-8px);
+  }
 }
 
 .header-social {
@@ -58,11 +69,15 @@ h1 {
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 1000;
   &__social-wrapper {
     width: 192px;
     @include media-breakpoint-down(xxl) {
       width: auto;
     }
+  }
+  &__collapse {
+    // background-color: #707070;
   }
   &__cta-wrapper {
     width: 192px;
@@ -79,12 +94,20 @@ h1 {
     display: flex;
     align-items: center;
     margin-left: auto;
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
     @include media-breakpoint-down(sm) {
       padding: 16px;
     }
   }
   &__toggler {
     border-radius: 4px;
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 16px 0;
   }
 }
 
@@ -110,5 +133,51 @@ h1 {
   }
   @include media-breakpoint-down(xl) {
     margin-top: 30px;
+  }
+}
+
+.custom-carousel {
+  &__indicators {
+    [data-bs-target] {
+      background-color: #fff;
+      opacity: 1;
+    }
+    .active {
+      background-color: #d4b254;
+    }
+  }
+  &__container {
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+  }
+  &__image {
+    width: 100%;
+    height: 900px;
+    max-height: 100vh;
+    object-fit: cover;
+  }
+  &__preheading {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 4px rgb(0,0,0);
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.23076922607421874em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__heading {
+    @include font-size(3.25rem);
+    letter-spacing: -0.019230770111083983em;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 0 25px rgba(0,0,0,0.5);
+    @include rfs(1.8125rem, margin-bottom);
   }
 }

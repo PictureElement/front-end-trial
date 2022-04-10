@@ -29,7 +29,7 @@
         <link rel="manifest" href="manifest.json">
     </head>
     <body>
-      <nav style="background-color: red;" class="custom-navbar navbar-expand-xl navbar-dark">
+      <nav class="custom-navbar navbar-expand-xl navbar-dark">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-between">
             
@@ -43,12 +43,12 @@
             </div>
 
             <!-- Logo (Mobile) -->
-            <a class="custom-nav__primary-link active d-xl-none" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a>
+            <a aria-label="Navigate to the homepage" class="custom-nav__primary-link active d-xl-none" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a>
 
             <!-- Call-to-action + Toggler (Mobile) -->
             <div class="d-flex d-xl-none">
               <div class="custom-navbar__cta-wrapper mx-2">
-                <button class="custom-navbar__cta btn btn-outline-accent">My order <img class="ms-2" src="images/shopping-cart.svg" alt="..." width="" height="13"></button>
+                <button class="custom-navbar__cta btn animation-float">My order <img class="ms-2" src="images/shopping-cart.svg" alt="..." width="" height="13"></button>
               </div>
               <button class="custom-navbar__toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryMenu" aria-controls="primaryMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
             </div>
 
             <!-- Menu -->
-            <div class="collapse navbar-collapse" id="primaryMenu">
+            <div class="custom-navbar__collapse collapse navbar-collapse" id="primaryMenu">
               <ul class="custom-nav align-items-center navbar-nav w-100">
                 <!-- Left menu -->
                 <li class="custom-nav__primary-item">
@@ -66,7 +66,7 @@
                   </ul>
                 </li>
                 <!-- Logo -->
-                <li style="flex-grow: 0;" class="custom-nav__primary-item custom-nav__primary-item_logo text-center d-none d-xl-block"><a class="custom-nav__primary-link active" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a></li>
+                <li style="flex-grow: 0;" class="custom-nav__primary-item custom-nav__primary-item_logo text-center d-none d-xl-block"><a aria-label="Navigate to the homepage" class="custom-nav__primary-link active" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a></li>
                 <!-- Right menu -->
                 <li class="custom-nav__primary-item">
                   <ul class="align-items-center navbar-nav w-100 justify-content-start">
@@ -79,13 +79,50 @@
 
             <!-- Call-to-action (Desktop) -->
             <div class="custom-navbar__cta-wrapper d-none d-xl-block">
-              <button class="custom-navbar__cta btn btn-outline-accent">My order <img class="ms-2" src="images/shopping-cart.svg" alt="..." width="" height="13"></button>
+              <button class="custom-navbar__cta btn animation-float">My order <img class="ms-2" src="images/shopping-cart.svg" alt="..." width="" height="13"></button>
             </div>
 
           </div>
         </div>
       </nav>
       
+      <main>
+        <section class="custom-hero">
+          <div id="heroCarousel" class="custom-carousel carousel slide" data-bs-ride="carousel">
+            <div class="custom-carousel__indicators carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item  position-relative active">
+                <img src="images/hero.jpg" class="custom-carousel__image d-block w-100" alt="...">
+                <div class="custom-carousel__container">
+                  <div class="custom-carousel__preheading">1. Design and order your new kitchen online today</div>
+                  <h2 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h2>
+                  <button type="button" class="btn btn-accent text-on-accent animation-float">Order now</button>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img src="images/hero.jpg" class="custom-carousel__image d-block w-100" alt="...">
+                <div class="custom-carousel__container">
+                  <div class="custom-carousel__preheading">2. Design and order your new kitchen online today</div>
+                  <h2 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h2>
+                  <button type="button" class="btn btn-accent text-on-accent animation-float">Order now</button>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img src="images/hero.jpg" class="custom-carousel__image d-block w-100" alt="...">
+                <div class="custom-carousel__container">
+                  <div class="custom-carousel__preheading">3. Design and order your new kitchen online today</div>
+                  <h2 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h2>
+                  <button type="button" class="btn btn-accent text-on-accent animation-float">Order now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
 
 
