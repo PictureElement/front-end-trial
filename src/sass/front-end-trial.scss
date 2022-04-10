@@ -19,6 +19,10 @@
 @import "../vendor/bootstrap/scss/reboot";
 @import "../vendor/bootstrap/scss/containers";
 @import "../vendor/bootstrap/scss/grid";
+@import "../vendor/bootstrap/scss/dropdown";
+@import "../vendor/bootstrap/scss/buttons";
+@import "../vendor/bootstrap/scss/transitions";
+@import "../vendor/bootstrap/scss/navbar";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../vendor/bootstrap/scss/utilities/api";
@@ -31,4 +35,80 @@
 h1 {
   @include font-size(4rem);
   @include rfs(4rem, margin-bottom);
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.header-social {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  &__item {
+    margin: 0 4px;
+  }
+}
+
+.custom-navbar {
+  padding: 30px 0;
+  border-bottom: 1px solid #707070;
+  position: absolute;
+  left: 0;
+  right: 0;
+  &__social-wrapper {
+    width: 192px;
+    @include media-breakpoint-down(xxl) {
+      width: auto;
+    }
+  }
+  &__cta-wrapper {
+    width: 192px;
+    @include media-breakpoint-down(xxl) {
+      width: auto;
+    }
+  }
+  &__cta {
+    border-radius: 25px;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 16.5px 40px;
+    letter-spacing: 0.23076922607421874em;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include media-breakpoint-down(sm) {
+      padding: 16px;
+    }
+  }
+  &__toggler {
+    border-radius: 4px;
+  }
+}
+
+.custom-nav {
+  &__primary-item {
+    flex: 1 1 0;
+    &_logo {
+      flex-grow: 1;
+      padding: 0 7vw;
+      @include media-breakpoint-down(xxl) {
+        padding: 0 1rem;
+      }
+    }
+  }
+  &__secondary-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.23076922607421874em;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  @include media-breakpoint-down(xl) {
+    margin-top: 30px;
+  }
 }

@@ -10,8 +10,13 @@
         <meta name="description" content="Static implementation of a website mockup. A take-home project, part of the recruitment process for a Front-end developer position at mtc.">
         <meta name="theme-color" content="#004ba0">
 
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
         <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
         
         <!-- CSS -->
         <link rel="stylesheet" href="vendor/aos/dist/aos.css">
@@ -24,6 +29,66 @@
         <link rel="manifest" href="manifest.json">
     </head>
     <body>
+      <nav style="background-color: red;" class="custom-navbar navbar-expand-xl navbar-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-between">
+            
+            <!-- Social -->
+            <div class="custom-navbar__social-wrapper d-none d-xl-block">
+              <ul class="header-social">
+                <li class="header-social__item"><a aria-label="Facebook" href="http://" target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" alt="..." width="10" height="16"></a></li>
+                <li class="header-social__item"><a aria-label="Twitter" href="http://" target="_blank" rel="noopener noreferrer"><img src="images/twitter.svg" alt="..." width="16" height="16"></a></li>
+                <li class="header-social__item"><a aria-label="Instagram" href="http://" target="_blank" rel="noopener noreferrer"><img src="images/instagram.svg" alt="..." width="14" height="16"></a></li>
+              </ul>
+            </div>
+
+            <!-- Logo (Mobile) -->
+            <a class="custom-nav__primary-link active d-xl-none" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a>
+
+            <!-- Call-to-action + Toggler (Mobile) -->
+            <div class="d-flex d-xl-none">
+              <div class="custom-navbar__cta-wrapper mx-2">
+                <button class="custom-navbar__cta btn btn-outline-accent">My order <img class="ms-2" src="images/shopping-cart.svg" alt="..." width="" height="13"></button>
+              </div>
+              <button class="custom-navbar__toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryMenu" aria-controls="primaryMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="primaryMenu">
+              <ul class="custom-nav align-items-center navbar-nav w-100">
+                <!-- Left menu -->
+                <li class="custom-nav__primary-item">
+                  <ul class="align-items-center navbar-nav w-100 justify-content-end">
+                    <li class="custom-nav__secondary-item mx-3 my-3"><a class="custom-nav__secondary-link py-3" href="#">Shop</a></li>
+                    <li class="custom-nav__secondary-item mx-3 my-3"><a class="custom-nav__secondary-link py-3" href="#">Plan my kitchen</a></li>
+                  </ul>
+                </li>
+                <!-- Logo -->
+                <li style="flex-grow: 0;" class="custom-nav__primary-item custom-nav__primary-item_logo text-center d-none d-xl-block"><a class="custom-nav__primary-link active" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a></li>
+                <!-- Right menu -->
+                <li class="custom-nav__primary-item">
+                  <ul class="align-items-center navbar-nav w-100 justify-content-start">
+                    <li class="custom-nav__secondary-item mx-3 my-3"><a class="custom-nav__secondary-link py-3" href="#">About us</a></li>
+                    <li class="custom-nav__secondary-item mx-3 my-3"><a class="custom-nav__secondary-link py-3" href="#">Gallery</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Call-to-action (Desktop) -->
+            <div class="custom-navbar__cta-wrapper d-none d-xl-block">
+              <button class="custom-navbar__cta btn btn-outline-accent">My order <img class="ms-2" src="images/shopping-cart.svg" alt="..." width="" height="13"></button>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+      
+
+
+
       <div class="container">
         <h1 class="text-primary">Front-end Trial</h1>
         <a href="http://">Link</a>
@@ -47,7 +112,7 @@
       <!-- Bootstrap JS -->
       <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
       <!-- AOS -->
-      <script src="vendor/aos/dist/aos.js"></script>
+      <!-- <script src="vendor/aos/dist/aos.js"></script> -->
       <!-- Site scripts -->
       <script src="js/front-end-trial.js"></script>
     </body>
