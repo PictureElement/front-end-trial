@@ -30,6 +30,6 @@
     "puppeteer": "^5.3.1"
   },
   "scripts": {
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "gulp build && gh-pages -d dist"
   }
 }
