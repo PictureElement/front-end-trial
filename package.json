@@ -11,8 +11,7 @@
     "@midzer/tobii": "^2.3.3",
     "aos": "^2.3.4",
     "bootstrap": "^5.1.3",
-    "fslightbox": "^3.3.1",
-    "headroom.js": "^0.12.0"
+    "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
     "browser-sync": "^2.27.4",

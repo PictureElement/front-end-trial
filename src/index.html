@@ -21,6 +21,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="vendor/aos/dist/aos.css">
         <link rel="stylesheet" href="vendor/@midzer/tobii/dist/tobii.min.css">
+        <link rel="stylesheet" href="vendor/tiny-slider/dist/tiny-slider.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
         <link rel="stylesheet" href="css/front-end-trial.css">
 
@@ -45,7 +46,7 @@
             </div>
 
             <!-- Logo (Mobile) -->
-            <a aria-label="Navigate to the homepage" class="custom-nav__primary-link active d-xl-none" aria-current="page" href="#"><img src="images/logo.svg" alt="..." height="33"></a>
+            <a aria-label="Navigate to the homepage" class="custom-nav__primary-link active d-xl-none" aria-current="page" href="."><img src="images/logo.svg" alt="..." height="33"></a>
 
             <!-- Call-to-action + Toggler (Mobile) -->
             <div class="d-flex d-xl-none">
@@ -149,43 +150,24 @@
 
         <!-- Testimonials -->
         <section class="custom-testimonials">
-          <div class="container">
-            <div class="custom-testimonials__preheading">What our customers say</div>
-            <h2 class="custom-testimonials__heading">Over 35 years experience designing handmade kitchens</h2>
-            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="custom-testimonials__container">
-                    <p class="custom-testimonials__statement">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
-                    <div class="custom-testimonials__author">Jane, Dundee</div>
-                  </div>
+          <div class="container position-relative">
+            <div class="custom-testimonials__container">
+              <div class="custom-testimonials__preheading">What our customers say</div>
+              <h2 class="custom-testimonials__heading">Over 35 years experience designing handmade kitchens</h2>
+              <div class="testimonials-slider">
+                <div>
+                  <p class="testimonials-slider__statement">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                  <div class="testimonials-slider__author">Jane, Dundee</div>
                 </div>
-                <div class="carousel-item">
-                  <div class="custom-testimonials__container">
-                    <p class="custom-testimonials__statement">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, corrupti aperiam nulla asperiores doloribus non natus sapiente animi vel id vero mollitia libero fugit dolor inventore odio, ipsa ipsam illum fuga aliquam velit eligendi consectetur? Obcaecati nobis deserunt suscipit recusandae labore iste enim optio molestias quis, illo consectetur. At, perspiciatis.</p>
-                    <div class="custom-testimonials__author">Jane, Dundee</div>
-                  </div>
+                <div>
+                  <p class="testimonials-slider__statement">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                  <div class="testimonials-slider__author">Olivia, Smith</div>
                 </div>
-                <div class="carousel-item">
-                  <div class="custom-testimonials__container">
-                    <p class="custom-testimonials__statement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugit exercitationem magni quod nobis, dolor laborum aperiam fugiat repudiandae delectus reiciendis qui iure? Eos, modi?</p>
-                    <div class="custom-testimonials__author">Jane, Dundee</div>
-                  </div>
+                <div>
+                  <p class="testimonials-slider__statement">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                  <div class="testimonials-slider__author">Olivia, Smith</div>
                 </div>
               </div>
-              <div class="carousel-indicators d-md-none">
-                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <button class="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next d-none d-lg-block" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
             <a href="." class="custom-testimonials__button btn btn-accent text-on-accent animation-float">Frequently Asked Questions</a>
           </div>
@@ -222,7 +204,113 @@
         </section>
       </main>
 
-      <footer class="custom-footer"></footer>
+      <footer class="custom-footer">
+        <div class="container">
+          <div class="custom-footer__logo-wrapper">
+            <a aria-label="Navigate to the homepage" class="custom-footer__logo" href="."><img src="images/logo.svg" alt="..." height="33"></a>
+          </div>
+          <!-- Menu (Mobile) -->
+          <div class="custom-footer__menu-mobile accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  About
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="custom-footer__list">
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Shop</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Plan my kitchen</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">About us</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Service
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="custom-footer__list">
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">FAQ</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Contact</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">How to buy</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Downloads</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Info
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="custom-footer__list">
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Delivery</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Terms</a></li>
+                    <li class="custom-footer__item"><a class="custom-footer__link" href=".">Privacy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Social (Mobile) -->
+          <div class="custom-footer__social-mobile">
+            <ul class="footer-social">
+              <li class="footer-social__item"><a aria-label="Facebook" href="." target="_blank" rel="noopener noreferrer"><img src="images/facebook-rounded.svg" alt="..." width="40" height="40"></a></li>
+              <li class="footer-social__item"><a aria-label="Twitter" href="." target="_blank" rel="noopener noreferrer"><img src="images/twitter-rounded.svg" alt="..." width="40" height="40"></a></li>
+              <li class="footer-social__item"><a aria-label="Instagram" href="." target="_blank" rel="noopener noreferrer"><img src="images/instagram-rounded.svg" alt="..." width="40" height="40"></a></li>
+            </ul>
+          </div>
+          <!-- Menu (Desktop) -->
+          <div class="custom-footer__menu-desktop row">
+            <div class="col-sm-4 col-md-2 offset-md-2">
+              <h3 class="custom-footer__heading custom-footer__heading_one">About</h3>
+              <ul class="custom-footer__list">
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Shop</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Plan my kitchen</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">About us</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Gallery</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-md-2">
+              <h3 class="custom-footer__heading custom-footer__heading_two">Service</h3>
+              <ul class="custom-footer__list">
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">FAQ</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Contact</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">How to buy</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Downloads</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-md-2">
+              <h3 class="custom-footer__heading custom-footer__heading_three">Info</h3>
+              <ul class="custom-footer__list">
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Delivery</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Terms</a></li>
+                <li class="custom-footer__item"><a class="custom-footer__link" href=".">Privacy</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <h3 class="custom-footer__heading custom-footer__heading_four">Follow</h3>
+              <ul class="footer-social">
+                <li class="footer-social__item"><a aria-label="Facebook" href="." target="_blank" rel="noopener noreferrer"><img src="images/facebook-rounded.svg" alt="..." width="40" height="40"></a></li>
+                <li class="footer-social__item"><a aria-label="Twitter" href="." target="_blank" rel="noopener noreferrer"><img src="images/twitter-rounded.svg" alt="..." width="40" height="40"></a></li>
+                <li class="footer-social__item"><a aria-label="Instagram" href="." target="_blank" rel="noopener noreferrer"><img src="images/instagram-rounded.svg" alt="..." width="40" height="40"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="custom-footer__copyright">Copyright Online MTC Home Kitchens 2018 - All rights reserved.<br />Responsive website design, Development & Hosting by mtc.</div>
+          <hr class="custom-footer__bottom-divider" />
+        </div>
+      </footer>
 
       <!-- Bootstrap JS -->
       <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -230,6 +318,8 @@
       <!-- <script src="vendor/aos/dist/aos.js"></script> -->
       <!-- Tobii -->
       <script src="vendor/@midzer/tobii/dist/tobii.min.js"></script>
+      <!-- Tiny Slider -->
+      <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
       <!-- Fancybox -->
       <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
       <!-- Site scripts -->

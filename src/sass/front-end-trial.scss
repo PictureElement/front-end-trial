@@ -23,6 +23,7 @@
 @import "../vendor/bootstrap/scss/buttons";
 @import "../vendor/bootstrap/scss/transitions";
 @import "../vendor/bootstrap/scss/navbar";
+@import "../vendor/bootstrap/scss/accordion";
 @import "../vendor/bootstrap/scss/carousel";
 @import "../vendor/bootstrap/scss/helpers";
 
@@ -30,15 +31,6 @@
 @import "../vendor/bootstrap/scss/utilities/api";
 
 // 6. Additional custom code
-// .border {
-//   border: 1px solid gray;
-// }
-
-// h1 {
-//   @include font-size(4rem);
-//   @include rfs(4rem, margin-bottom);
-// }
-
 @mixin section-preheading {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -85,9 +77,6 @@
     @include media-breakpoint-down(xxl) {
       width: auto;
     }
-  }
-  &__collapse {
-    // background-color: #707070;
   }
   &__cta-wrapper {
     width: 192px;
@@ -190,7 +179,7 @@
     line-height: 1.1;
     color: #fff;
     text-shadow: 0 0 25px rgba(0,0,0,0.5);
-    @include rfs(1.8125rem, margin-bottom);
+    margin-bottom: 29px;
   }
 }
 
@@ -227,7 +216,7 @@
     @include rfs(2rem, margin-bottom);
   }
   &__text {
-    font-size: 1rem;
+    font-size: 16px;
     margin-bottom: 27px;
     color: #777;
     font-family: 'Roboto', sans-serif;
@@ -247,25 +236,30 @@
   @include rfs(7.5rem, padding-top);
   @include rfs(7.5rem, padding-bottom);
   background-color: #eee;
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+  }
   &__preheading {
     margin-bottom: 18px;
     @include section-preheading;
-  }
-  .container {
-    @include media-breakpoint-up(md) {
-      max-width: 620px;
-    }
   }
   &__button {
     margin-top: 36px;
   }
   &__heading {
-    @include font-size(2rem);
+    font-size: 32px;
     line-height: 1.3125;
-    @include rfs(1.5rem, margin-bottom);
+    margin-bottom: 36px;
   }
+}
+
+.testimonials-slider {
   &__statement{
-    @include font-size(1.125rem);
+    font-size: 18px;
     line-height: 2;
     color: #777;
     margin-bottom: 13px;
@@ -275,30 +269,44 @@
     font-size: 15px;
     line-height: 28px;
     color: #777;
-    
   }
-  .carousel-indicators {
-    position: static;
+}
+
+.tns-controls {
+  position: absolute; 
+  left: 50%;
+  bottom: 50%;
+  width: calc(100% - 16.66%);
+  margin-right: -50%;
+  transform: translate(-50%, calc(50% - 24px));
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+  button {
+    padding: 0;
+    border: none;
+    display: inline-block;
   }
-  .carousel-control-prev {
-    left: -43%;
-    background-image: none;
-    align-items: start;
-    @include media-breakpoint-down(xl) {
-      left: -90px;
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.tns-nav {
+  display: none;
+  margin-top: 24px;
+  button {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $accent;
+    margin: 0 8px;
+    border-radius: 50%;
+    &.tns-nav-active {
+      background-color: $accent;
     }
   }
-  .carousel-control-next {
-    right: -43%;
-    background-image: none;
-    align-items: start;
-    @include media-breakpoint-down(xl) {
-      right: -90px;
-    }
-  }
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
+  @include media-breakpoint-down(lg) {
+    display: block;
   }
 }
 
@@ -318,13 +326,137 @@
     object-fit: cover;
   }
   &__heading {
-    @include font-size(2rem);
+    font-size: 32px;
     line-height: 1.3125;
-    @include rfs(2.3125rem, margin-bottom);
+    margin-bottom: 37px;
   }
 }
 
 .custom-footer {
-  height: 495px;
-  background-color: black;
+  background-color: #000;
+  background-image: url(../images/footer@2x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 0 60px 0;
+  &__menu-mobile {
+    display: none;
+  }
+  &__social-mobile {
+    display: none;
+    .footer-social {
+      justify-content: center;
+      margin-top: 24px;
+    }
+  }
+  &__logo-wrapper {
+    text-align: center;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: rgba(255,255,255,0.2);
+      width: calc(50% - 60px);
+      left: 0;
+      top: 16px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: rgba(255,255,255,0.2);
+      width: calc(50% - 60px);
+      right: 0;
+      top: 16px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 35px;
+  }
+  &__copyright {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 2;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 38px;
+  }
+  &__heading {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+    font-weight: 700;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 12px;
+    }
+    &_two {
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+      }
+    }
+    &_three {
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+      }
+    }
+    &_four {
+      margin-bottom: 34px;
+      @include media-breakpoint-down(md) {
+        margin: 24px 0;
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__bottom-divider {
+    margin: 0;
+    background-color: rgba(255,255,255,0.2);
+  }
+  &__link {
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    line-height: 30px;
+    letter-spacing: 0.23076922607421874em;
+    font-weight: 400;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    &:hover {
+      color: rgba(255,255,255,1);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    background-image: none;
+    &__menu-desktop {
+      display: none;
+    }
+    &__menu-mobile, &__social-mobile {
+      display: block;
+    }
+  }
+}
+
+.footer-social {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  &__item {
+    margin-right: 15px;
+  }
+}
+
+.accordion-button {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.75;
+  font-weight: 700;
 }

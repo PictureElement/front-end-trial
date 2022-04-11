@@ -34,7 +34,10 @@ function populateVendor() {
     'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
     'node_modules/bootstrap/scss/**/*',
     'node_modules/@midzer/tobii/dist/tobii.min.css',
-    'node_modules/@midzer/tobii/dist/tobii.min.js'
+    'node_modules/@midzer/tobii/dist/tobii.min.js',
+    'node_modules/tiny-slider/dist/min/tiny-slider.js',
+    'node_modules/tiny-slider/dist/sourcemaps/tiny-slider.js.map',
+    'node_modules/tiny-slider/dist/tiny-slider.css'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('src/vendor/'));
 }
