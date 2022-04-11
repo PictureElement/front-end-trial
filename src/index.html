@@ -33,7 +33,7 @@
     </head>
     <body>
       <nav class="custom-navbar navbar-expand-xl navbar-dark">
-        <div style="border-bottom: 1px solid #707070;" class="container">
+        <div style="border-bottom: 1px solid #707070;" class="container" data-aos="fade-down">
           <div class="custom-navbar__container">
             
             <!-- Social -->
@@ -92,7 +92,7 @@
       <main>
         <!-- Hero -->
         <section class="custom-hero">
-          <div id="heroCarousel" class="custom-carousel carousel slide" data-bs-ride="carousel">
+          <div id="heroCarousel" class="custom-carousel carousel slide" data-bs-ride="false">
             <div class="custom-carousel__indicators carousel-indicators">
               <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -102,9 +102,9 @@
               <div class="carousel-item  position-relative active">
                 <img src="images/hero.jpg" class="custom-carousel__image d-block w-100" alt="...">
                 <div class="custom-carousel__container">
-                  <div class="custom-carousel__preheading">1. Design and order your new kitchen online today</div>
-                  <h1 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h1>
-                  <a href="." class="btn btn-accent text-on-accent animation-float">Order now</a>
+                  <div class="custom-carousel__preheading" data-aos="fade-up">1. Design and order your new kitchen online today</div>
+                  <h1 class="custom-carousel__heading" data-aos="fade-up" data-aos-delay="200">Bespoke & made to measure handmade kitchen design</h1>
+                  <a href="." class="btn btn-accent text-on-accent animation-float" data-aos="fade-up" data-aos-delay="400">Order now</a>
                 </div>
               </div>
               <div class="carousel-item position-relative">
@@ -132,7 +132,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6">
-                <div class="position-relative h-100">
+                <div class="position-relative h-100" data-aos="fade-right" data-aos-delay="200">
                   <img class="custom-about__image" src="images/about.jpg" alt="..." srcset="">
                 </div>
               </div>
@@ -178,22 +178,22 @@
           <div class="container">
             <div class="custom-gallery__heading">Customer Gallery</div>
             <div class="row">
-              <div class="col-6 col-sm-3">
+              <div class="col-6 col-sm-3" data-aos="fade-up">
                 <a data-src="images/gallery-1@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
                   <img src="images/gallery-1.jpg" class="custom-gallery__image d-block w-100" alt="...">
                 </a>
               </div>
-              <div class="col-6 col-sm-3">
+              <div class="col-6 col-sm-3" data-aos="fade-up">
                 <a data-src="images/gallery-2@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
                   <img src="images/gallery-2.jpg" class="custom-gallery__image d-block w-100" alt="...">
                 </a>
               </div>
-              <div class="col-6 col-sm-3">
+              <div class="col-6 col-sm-3" data-aos="fade-up">
                 <a data-src="images/gallery-3@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
                   <img src="images/gallery-3.jpg" class="custom-gallery__image d-block w-100" alt="...">
                 </a>
               </div>
-              <div class="col-6 col-sm-3">
+              <div class="col-6 col-sm-3" data-aos="fade-up">
                 <a data-src="images/gallery-4@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
                   <img src="images/gallery-4.jpg" class="custom-gallery__image d-block w-100" alt="...">
                 </a>
@@ -315,7 +315,7 @@
       <!-- Bootstrap JS -->
       <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
       <!-- AOS -->
-      <!-- <script src="vendor/aos/dist/aos.js"></script> -->
+      <script src="vendor/aos/dist/aos.js"></script>
       <!-- Tobii -->
       <script src="vendor/@midzer/tobii/dist/tobii.min.js"></script>
       <!-- Tiny Slider -->
