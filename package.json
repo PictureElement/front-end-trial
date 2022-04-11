@@ -17,6 +17,7 @@
     "browser-sync": "^2.27.4",
     "critical": "^2.0.5",
     "del": "^5.1.0",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
@@ -27,5 +28,8 @@
     "gulp-useref": "^4.0.1",
     "gulp-wait": "0.0.2",
     "puppeteer": "^5.3.1"
+  },
+  "scripts": {
+    "deploy": "npm run build && gh-pages -d dist"
   }
 }
