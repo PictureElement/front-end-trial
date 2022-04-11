@@ -20,6 +20,8 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="vendor/aos/dist/aos.css">
+        <link rel="stylesheet" href="vendor/@midzer/tobii/dist/tobii.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
         <link rel="stylesheet" href="css/front-end-trial.css">
 
         <!-- Favicon and App icons-->
@@ -36,9 +38,9 @@
             <!-- Social -->
             <div class="custom-navbar__social-wrapper d-none d-xl-block">
               <ul class="header-social">
-                <li class="header-social__item"><a aria-label="Facebook" href="http://" target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" alt="..." width="10" height="16"></a></li>
-                <li class="header-social__item"><a aria-label="Twitter" href="http://" target="_blank" rel="noopener noreferrer"><img src="images/twitter.svg" alt="..." width="16" height="16"></a></li>
-                <li class="header-social__item"><a aria-label="Instagram" href="http://" target="_blank" rel="noopener noreferrer"><img src="images/instagram.svg" alt="..." width="14" height="16"></a></li>
+                <li class="header-social__item"><a aria-label="Facebook" href="." target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" alt="..." width="10" height="16"></a></li>
+                <li class="header-social__item"><a aria-label="Twitter" href="." target="_blank" rel="noopener noreferrer"><img src="images/twitter.svg" alt="..." width="16" height="16"></a></li>
+                <li class="header-social__item"><a aria-label="Instagram" href="." target="_blank" rel="noopener noreferrer"><img src="images/instagram.svg" alt="..." width="14" height="16"></a></li>
               </ul>
             </div>
 
@@ -87,6 +89,7 @@
       </nav>
       
       <main>
+        <!-- Hero -->
         <section class="custom-hero">
           <div id="heroCarousel" class="custom-carousel carousel slide" data-bs-ride="carousel">
             <div class="custom-carousel__indicators carousel-indicators">
@@ -99,8 +102,8 @@
                 <img src="images/hero.jpg" class="custom-carousel__image d-block w-100" alt="...">
                 <div class="custom-carousel__container">
                   <div class="custom-carousel__preheading">1. Design and order your new kitchen online today</div>
-                  <h2 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h2>
-                  <button type="button" class="btn btn-accent text-on-accent animation-float">Order now</button>
+                  <h1 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h1>
+                  <a href="." class="btn btn-accent text-on-accent animation-float">Order now</a>
                 </div>
               </div>
               <div class="carousel-item position-relative">
@@ -108,7 +111,7 @@
                 <div class="custom-carousel__container">
                   <div class="custom-carousel__preheading">2. Design and order your new kitchen online today</div>
                   <h2 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h2>
-                  <button type="button" class="btn btn-accent text-on-accent animation-float">Order now</button>
+                  <a href="." class="btn btn-accent text-on-accent animation-float">Order now</a>
                 </div>
               </div>
               <div class="carousel-item position-relative">
@@ -116,40 +119,119 @@
                 <div class="custom-carousel__container">
                   <div class="custom-carousel__preheading">3. Design and order your new kitchen online today</div>
                   <h2 class="custom-carousel__heading">Bespoke & made to measure handmade kitchen design</h2>
-                  <button type="button" class="btn btn-accent text-on-accent animation-float">Order now</button>
+                  <a href="." class="btn btn-accent text-on-accent animation-float">Order now</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <!-- About -->
+        <section class="custom-about">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="position-relative h-100">
+                  <img class="custom-about__image" src="images/about.jpg" alt="..." srcset="">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="custom-about__right">
+                  <div class="custom-about__preheading">Quality Craftmanship from build to delivery</div>
+                  <h2 class="custom-about__heading">Discover the beauty of a handmade kitchen</h2>
+                  <p class="custom-about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu, feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.</p>
+                  <a href="." class="btn btn-accent text-on-accent animation-float">About us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="custom-testimonials">
+          <div class="container">
+            <div class="custom-testimonials__preheading">What our customers say</div>
+            <h2 class="custom-testimonials__heading">Over 35 years experience designing handmade kitchens</h2>
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="custom-testimonials__container">
+                    <p class="custom-testimonials__statement">Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                    <div class="custom-testimonials__author">Jane, Dundee</div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="custom-testimonials__container">
+                    <p class="custom-testimonials__statement">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, corrupti aperiam nulla asperiores doloribus non natus sapiente animi vel id vero mollitia libero fugit dolor inventore odio, ipsa ipsam illum fuga aliquam velit eligendi consectetur? Obcaecati nobis deserunt suscipit recusandae labore iste enim optio molestias quis, illo consectetur. At, perspiciatis.</p>
+                    <div class="custom-testimonials__author">Jane, Dundee</div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="custom-testimonials__container">
+                    <p class="custom-testimonials__statement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugit exercitationem magni quod nobis, dolor laborum aperiam fugiat repudiandae delectus reiciendis qui iure? Eos, modi?</p>
+                    <div class="custom-testimonials__author">Jane, Dundee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-indicators d-md-none">
+                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <button class="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next d-none d-lg-block" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <a href="." class="custom-testimonials__button btn btn-accent text-on-accent animation-float">Frequently Asked Questions</a>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="custom-gallery">
+          <div class="container">
+            <div class="custom-gallery__heading">Customer Gallery</div>
+            <div class="row">
+              <div class="col-6 col-sm-3">
+                <a data-src="images/gallery-1@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
+                  <img src="images/gallery-1.jpg" class="custom-gallery__image d-block w-100" alt="...">
+                </a>
+              </div>
+              <div class="col-6 col-sm-3">
+                <a data-src="images/gallery-2@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
+                  <img src="images/gallery-2.jpg" class="custom-gallery__image d-block w-100" alt="...">
+                </a>
+              </div>
+              <div class="col-6 col-sm-3">
+                <a data-src="images/gallery-3@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
+                  <img src="images/gallery-3.jpg" class="custom-gallery__image d-block w-100" alt="...">
+                </a>
+              </div>
+              <div class="col-6 col-sm-3">
+                <a data-src="images/gallery-4@2x.jpg" class="custom-gallery__link" data-fancybox="gallery" data-caption="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
+                  <img src="images/gallery-4.jpg" class="custom-gallery__image d-block w-100" alt="...">
+                </a>
+              </div>
+            </div>
+            <a href="." class="custom-gallery__button btn btn-accent text-on-accent animation-float">View more</a>
+          </div>
+        </section>
       </main>
 
+      <footer class="custom-footer"></footer>
 
-
-      <div class="container">
-        <h1 class="text-primary">Front-end Trial</h1>
-        <a href="http://">Link</a>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="border">Column</div>
-          </div>
-          <div class="col-lg-3">
-            <div class="border">Column</div>
-          </div>
-          <div class="col-lg-3">
-            <div class="border">Column</div>
-          </div>
-          <div class="col-lg-3">
-            <div class="border">Column</div>
-          </div>
-        </div>
-      </div>
       <!-- Bootstrap JS -->
       <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
       <!-- AOS -->
       <!-- <script src="vendor/aos/dist/aos.js"></script> -->
+      <!-- Tobii -->
+      <script src="vendor/@midzer/tobii/dist/tobii.min.js"></script>
+      <!-- Fancybox -->
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
       <!-- Site scripts -->
       <script src="js/front-end-trial.js"></script>
     </body>
