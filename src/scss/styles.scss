@@ -200,6 +200,10 @@
     height: 900px;
     max-height: 100vh;
     object-fit: cover;
+
+    @include media-breakpoint-down(sm) {
+      max-height: 90vh;
+    }
   }
 
   &__preheading {
