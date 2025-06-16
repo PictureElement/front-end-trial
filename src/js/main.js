@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize AOS
   AOS.init({ once: true });
 
-  document.querySelectorAll('a[data-basiclightbox="gallery"]').forEach(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault() // Prevent default link behavior
+  document.querySelectorAll('button[data-basiclightbox="gallery"]').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault() // Prevent default button behavior
 
-      const imgSrc = link.getAttribute('data-src')
-      const caption = link.getAttribute('data-caption')
+      const imgSrc = button.getAttribute('data-src')
+      const caption = button.getAttribute('data-caption')
 
       // Build the lightbox content
       let content = `
