@@ -2,12 +2,25 @@
 
 Static implementation of a website mockup. A take-home project, part of the recruitment process for a Front-end developer position at mtc.
 
-## Development Setup
+## Installation
 
-```
+Clone the repository and install dependencies:
+
+```sh
+https://github.com/PictureElement/front-end-trial.git
+cd front-end-trial
 npm install
+```
+
+## Development
+
+To start the development server with hot reloading:
+
+```sh
 npm run dev
 ```
+
+Open [http://localhost:8080](http://localhost:8080) in your browser to view the site.
 
 ## License
 
