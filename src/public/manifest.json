@@ -1,0 +1,20 @@
+{
+  "name": "front-end-trial",
+  "short_name": "front-end-trial",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Static implementation of a website mockup. A take-home project, part of the recruitment process for a Front-end developer position at mtc.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

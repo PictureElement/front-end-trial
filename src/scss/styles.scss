@@ -1,36 +1,42 @@
 /*!
  * Front-end Trial
- * Copyright 2022 Marios Sofokleous
+ * Copyright 2022-2025 Marios Sofokleous
  */
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../vendor/bootstrap/scss/functions";
+@import "bootstrap/scss/functions";
 
-// 2. Theme variables
+// 2. Include any default variable overrides here
 @import "_settings.scss";
 
-// 3. Include remainder of required Bootstrap stylesheets
-@import "../vendor/bootstrap/scss/variables";
-@import "../vendor/bootstrap/scss/mixins";
-@import "../vendor/bootstrap/scss/root";
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 
-// 4. Include any optional Bootstrap CSS as needed
-@import "../vendor/bootstrap/scss/utilities";
-@import "../vendor/bootstrap/scss/reboot";
-@import "../vendor/bootstrap/scss/containers";
-@import "../vendor/bootstrap/scss/grid";
-@import "../vendor/bootstrap/scss/dropdown";
-@import "../vendor/bootstrap/scss/buttons";
-@import "../vendor/bootstrap/scss/transitions";
-@import "../vendor/bootstrap/scss/navbar";
-@import "../vendor/bootstrap/scss/accordion";
-@import "../vendor/bootstrap/scss/carousel";
-@import "../vendor/bootstrap/scss/helpers";
+// 4. Include any default map overrides here
 
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "../vendor/bootstrap/scss/utilities/api";
+// 5. Include remainder of required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
 
-// 6. Additional custom code
+// 6. Include any other optional stylesheet partials as desired; list below is not inclusive of all available stylesheets
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
 @mixin section-preheading {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -50,7 +56,10 @@
   transition-duration: .3s;
   transition-property: transform;
   transition-timing-function: ease-out;
-  &:hover, &:focus, &:active {
+
+  &:hover,
+  &:focus,
+  &:active {
     transform: translateY(-8px);
   }
 }
@@ -60,6 +69,7 @@
   list-style: none;
   display: flex;
   margin-bottom: 0;
+
   &__item {
     margin: 0 4px;
   }
@@ -71,31 +81,39 @@
   right: 0;
   z-index: 1000;
   transition: background-color 400ms ease-in-out;
+
   &_bg {
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0, 0, 0, 0.95);
   }
+
   &__container {
     padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
     @include media-breakpoint-down(xxl) {
       padding: 16px 0;
     }
   }
+
   &__social-wrapper {
     width: 192px;
+
     @include media-breakpoint-down(xxl) {
       width: auto;
     }
   }
+
   &__cta-wrapper {
     width: 192px;
+
     @include media-breakpoint-down(xxl) {
       width: auto;
     }
   }
+
   &__cta {
     border-radius: 25px;
     font-size: 13px;
@@ -107,13 +125,16 @@
     margin-left: auto;
     border: 1px solid #fff;
     color: #fff;
+
     &:hover {
       color: #fff;
     }
+
     @include media-breakpoint-down(sm) {
       padding: 16px;
     }
   }
+
   &__toggler {
     border-radius: 4px;
   }
@@ -122,14 +143,17 @@
 .custom-nav {
   &__primary-item {
     flex: 1 1 0;
+
     &_logo {
       flex-grow: 1;
       padding: 0 7vw;
+
       @include media-breakpoint-down(xxl) {
         padding: 0 1rem;
       }
     }
   }
+
   &__secondary-link {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
@@ -139,6 +163,7 @@
     font-weight: 400;
     text-transform: uppercase;
     transition: border .3s ease-in-out;
+
     &:hover {
       color: #fff;
       border-bottom: 1px solid #fff;
@@ -152,10 +177,12 @@
       background-color: #fff;
       opacity: 1;
     }
+
     .active {
       background-color: #d4b254;
     }
   }
+
   &__container {
     padding: 0 10px;
     position: absolute;
@@ -167,23 +194,26 @@
     text-align: center;
     max-width: 700px;
   }
+
   &__image {
     width: 100%;
     height: 900px;
     max-height: 100vh;
     object-fit: cover;
   }
+
   &__preheading {
-    text-shadow: 0 0 4px rgb(0,0,0);
+    text-shadow: 0 0 4px rgb(0, 0, 0);
     @include section-preheading;
     color: #fff;
   }
+
   &__heading {
     @include font-size(3.25rem);
     letter-spacing: -0.019230770111083983em;
     line-height: 1.1;
     color: #fff;
-    text-shadow: 0 0 25px rgba(0,0,0,0.5);
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     margin-bottom: 29px;
   }
 }
@@ -193,6 +223,7 @@
     margin-bottom: 3px;
     @include section-preheading;
   }
+
   &__image {
     width: 50vw;
     height: 100%;
@@ -200,6 +231,7 @@
     position: absolute;
     top: 0;
     right: -10px;
+
     @include media-breakpoint-down(md) {
       position: static;
       width: 100%;
@@ -207,19 +239,23 @@
       margin-bottom: 20px;
     }
   }
+
   &__right {
     @include rfs(3.75rem, padding-left);
     @include rfs(10.625rem, padding-top);
     @include rfs(10.625rem, padding-bottom);
+
     @include media-breakpoint-down(md) {
       padding: 0;
     }
   }
+
   &__heading {
     @include font-size(2.625rem);
     line-height: 1.25;
     @include rfs(2rem, margin-bottom);
   }
+
   &__text {
     font-size: 16px;
     margin-bottom: 27px;
@@ -229,6 +265,7 @@
     line-height: 28px;
     font-weight: 400;
   }
+
   @include media-breakpoint-down(md) {
     text-align: center;
     @include rfs(7.5rem, padding-top);
@@ -241,20 +278,25 @@
   @include rfs(7.5rem, padding-top);
   @include rfs(7.5rem, padding-bottom);
   background-color: #eee;
+
   &__container {
     max-width: 600px;
     margin: 0 auto;
+
     @include media-breakpoint-down(lg) {
       max-width: 100%;
     }
   }
+
   &__preheading {
     margin-bottom: 18px;
     @include section-preheading;
   }
+
   &__button {
     margin-top: 36px;
   }
+
   &__heading {
     font-size: 32px;
     line-height: 1.3125;
@@ -263,12 +305,13 @@
 }
 
 .testimonials-slider {
-  &__statement{
+  &__statement {
     font-size: 18px;
     line-height: 2;
     color: #777;
     margin-bottom: 13px;
   }
+
   &__author {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -278,7 +321,7 @@
 }
 
 .tns-controls {
-  position: absolute; 
+  position: absolute;
   left: 50%;
   bottom: 50%;
   width: calc(100% - 16.66%);
@@ -287,11 +330,13 @@
   display: flex;
   justify-content: space-between;
   z-index: 0;
+
   button {
     padding: 0;
     border: none;
     display: inline-block;
   }
+
   @include media-breakpoint-down(lg) {
     display: none;
   }
@@ -300,16 +345,19 @@
 .tns-nav {
   display: none;
   margin-top: 24px;
+
   button {
     width: 16px;
     height: 16px;
     border: 1px solid $accent;
     margin: 0 8px;
     border-radius: 50%;
+
     &.tns-nav-active {
       background-color: $accent;
     }
   }
+
   @include media-breakpoint-down(lg) {
     display: block;
   }
@@ -319,21 +367,45 @@
   @include rfs(5.1875rem, padding-top);
   @include rfs(6.25rem, padding-bottom);
   text-align: center;
+
   &__button {
     margin-top: 20px;
   }
+
   &__link {
     display: block;
     cursor: pointer;
     margin-bottom: 20px;
   }
+
   &__image {
     object-fit: cover;
   }
+
   &__heading {
     font-size: 32px;
     line-height: 1.3125;
     margin-bottom: 37px;
+  }
+}
+
+.lightbox {
+  display: block;
+
+  &__image {
+    max-width: 620px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    ;
+  }
+
+  &__caption {
+    font-size: 0.875rem;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 1rem;
   }
 }
 
@@ -343,107 +415,129 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px 0 60px 0;
+
   &__menu-mobile {
     display: none;
   }
+
   &__social-mobile {
     display: none;
+
     .footer-social {
       justify-content: center;
       margin-top: 24px;
     }
   }
+
   &__logo-wrapper {
     text-align: center;
     position: relative;
+
     &::before {
       content: '';
       display: block;
       position: absolute;
       height: 1px;
-      background-color: rgba(255,255,255,0.2);
+      background-color: rgba(255, 255, 255, 0.2);
       width: calc(50% - 60px);
       left: 0;
       top: 16px;
     }
+
     &::after {
       content: '';
       display: block;
       position: absolute;
       height: 1px;
-      background-color: rgba(255,255,255,0.2);
+      background-color: rgba(255, 255, 255, 0.2);
       width: calc(50% - 60px);
       right: 0;
       top: 16px;
     }
   }
+
   &__logo {
     display: inline-block;
     margin-bottom: 35px;
   }
+
   &__copyright {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     line-height: 2;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
     margin-bottom: 60px;
     margin-top: 38px;
   }
+
   &__heading {
     color: #fff;
     font-size: 24px;
     line-height: 1.75;
     margin-bottom: 24px;
     font-weight: 700;
+
     @include media-breakpoint-down(md) {
       margin-bottom: 12px;
     }
+
     &_two {
       @include media-breakpoint-down(md) {
         margin-top: 24px;
       }
     }
+
     &_three {
       @include media-breakpoint-down(md) {
         margin-top: 24px;
       }
     }
+
     &_four {
       margin-bottom: 34px;
+
       @include media-breakpoint-down(md) {
         margin: 24px 0;
       }
     }
   }
+
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
   }
+
   &__bottom-divider {
     margin: 0;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
   }
+
   &__link {
     text-transform: uppercase;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 13px;
     line-height: 30px;
     letter-spacing: 0.23076922607421874em;
     font-weight: 400;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
+
     &:hover {
-      color: rgba(255,255,255,1);
+      color: rgba(255, 255, 255, 1);
     }
   }
+
   @include media-breakpoint-down(md) {
     background-image: none;
+
     &__menu-desktop {
       display: none;
     }
-    &__menu-mobile, &__social-mobile {
+
+    &__menu-mobile,
+    &__social-mobile {
       display: block;
     }
   }
@@ -454,10 +548,13 @@
   list-style: none;
   display: flex;
   margin-bottom: 0;
+
   &__item {
     margin-right: 15px;
     transition: transform .3s ease-in-out;
-    &:hover, &:active {
+
+    &:hover,
+    &:active {
       display: inline-block;
       transform: scale(1.1);
     }
@@ -470,4 +567,3 @@
   line-height: 1.75;
   font-weight: 700;
 }
-

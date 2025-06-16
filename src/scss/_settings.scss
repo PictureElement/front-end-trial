@@ -23,10 +23,7 @@ $enable-shadows: true;
 $enable-gradients: true;
 
 // Links
-$link-color: currentcolor;
 $link-decoration: none;
-$link-hover-color: currentcolor;
-$link-hover-decoration: none;
 
 // Buttons
 $btn-padding-y: 20px;
@@ -48,7 +45,7 @@ $carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w
 
 // Accordion
 $accordion-bg: #000;
-$accordion-border-color: rgba(255,255,255,0.2);
+$accordion-border-color: rgba(255, 255, 255, 0.2);
 $accordion-color: #fff;
 $accordion-button-active-bg: #000;
 $accordion-button-active-color: $accent;
