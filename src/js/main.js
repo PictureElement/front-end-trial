@@ -1,3 +1,21 @@
+import facebookIcon from '../assets/facebook.svg';
+import twitterIcon from '../assets/twitter.svg';
+import instagramIcon from '../assets/instagram.svg';
+import logo from '../assets/logo.svg';
+import shoppingCartIcon from '../assets/shopping-cart.svg';
+import hero from '../assets/hero.jpg';
+import about from '../assets/about.jpg';
+import gallery1 from '../assets/gallery1.jpg';
+import gallery1full from '../assets/gallery1full.jpg';
+import gallery2 from '../assets/gallery2.jpg';
+import gallery2full from '../assets/gallery2full.jpg';
+import gallery3 from '../assets/gallery3.jpg';
+import gallery3full from '../assets/gallery3full.jpg';
+import gallery4 from '../assets/gallery4.jpg';
+import gallery4full from '../assets/gallery4full.jpg';
+import facebookRoundedIcon from '../assets/facebook-rounded.svg';
+import twitterRoundedIcon from '../assets/twitter-rounded.svg';
+import instagramRoundedIcon from '../assets/instagram-rounded.svg';
 
 // Import Tiny Slider
 import { tns } from 'tiny-slider/src/tiny-slider.js';
