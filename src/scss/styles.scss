@@ -71,7 +71,16 @@
   margin-bottom: 0;
 
   &__item {
-    margin: 0 4px;
+    width: 32px;
+    height: 32px;
+    margin-inline-end: 8px;
+
+    >a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
